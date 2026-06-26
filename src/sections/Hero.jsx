@@ -6,14 +6,15 @@ export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-24 md:px-12">
-      {/* Cinematic Background Image Overlay - Loading straight from public root */}
-      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-24 md:px-12 bg-[#0A0A0A]">
+      {/* Cinematic Background Image Overlay - Production Level Prioritization */}
+      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden bg-[#0A0A0A]">
         <img 
-          src="/gym_background.webp" 
+          src="./gym_background.webp" 
           alt="Premium Dark Aesthetic Gym" 
-          className="w-full h-full object-cover opacity-65 filter grayscale-[40%] contrast-110 brightness-[85%] scale-100"
+          className="w-full h-full object-cover opacity-65 filter grayscale-[40%] contrast-110 brightness-[85%] scale-100 transition-opacity duration-300"
           loading="eager"
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,#0A0A0A_95%)]" />
@@ -108,13 +109,18 @@ export default function Hero() {
                 <X className="w-4 h-4" />
               </button>
 
+              {/* Robust HTML5 Production Video Stream Setup */}
               <video 
-                src="/facility_tour.mp4"
                 className="w-full h-full object-cover"
                 autoPlay
+                muted
                 controls
                 playsInline
-              />
+                preload="auto"
+              >
+                <source src="./facility_tour.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </motion.div>
           </motion.div>
         )}
