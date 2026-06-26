@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Flame, X } from 'lucide-react';
-import gymBackground from '../assets/gym_background.png';
+import gymBackground from '../assets/gym_background.webp';
 import facilityTourVid from '../assets/facility_tour.mp4';
 
 export default function Hero() {
