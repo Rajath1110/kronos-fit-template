@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Flame, X } from 'lucide-react';
-import gymBackground from '../assets/gym_background.webp';
-//import facilityTourVid from '../assets/facility_tour.mp4';
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-24 md:px-12">
-      {/* Cinematic Background Image Overlay */}
+      {/* Cinematic Background Image Overlay - Loading straight from public root */}
       <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         <img 
-          src={gymBackground} 
+          src="/gym_background.webp" 
           alt="Premium Dark Aesthetic Gym" 
           className="w-full h-full object-cover opacity-65 filter grayscale-[40%] contrast-110 brightness-[85%] scale-100"
           loading="eager"
