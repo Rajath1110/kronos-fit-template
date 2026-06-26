@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Flame, X } from 'lucide-react';
 import gymBackground from '../assets/gym_background.webp';
-import facilityTourVid from '../assets/facility_tour.mp4';
+//import facilityTourVid from '../assets/facility_tour.mp4';
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -111,7 +111,7 @@ export default function Hero() {
               </button>
 
               <video 
-                src={facilityTourVid}
+                src="/facility_tour.mp4"
                 className="w-full h-full object-cover"
                 autoPlay
                 controls
