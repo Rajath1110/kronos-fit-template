@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap');
+
+@theme {
+  /* Custom Dark Palette variables */
+  --color-background: #0A0A0A;
+  --color-background-card: #141414;
+  --color-background-nav: rgba(10, 10, 10, 0.75);
+  
+  --color-accent: #CCFF00;
+  --color-accent-hover: #B3E600;
+  
+  --color-muted: #A0A0A0;
+  --color-muted-border: #1F1F1F;
+
+  /* Custom Typography variables */
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom premium class for bold, aggressive text headings */
+.heading-premium {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
